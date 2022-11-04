@@ -17,7 +17,12 @@ const pagesembed = require("pagesembed")
 client.on('messageCreate', async pkgPage => {
 	if(pkgPage.content.includes("?test")){
 		let embeds = [
-			new EmbedBuilder().setTitle(' embeds: 1').setDescription('[Description : 1]'),
+new EmbedBuilder().setTitle(' embeds: 1').setDescription(`
+[Support Code](https://discord.gg/sJZZf4c8b5)
+[Shop](https://discord.gg/8HN97GH3pP)
+[Support Pkg](https://discord.gg/vDAdrVNPKt)
+[𝑫𝒂𝒓𝒌_𝑴𝒂𝒔𝒕𝒆𝒓#7420](https://discord.com/channels/@me/811740947409797152)
+`),
 			new EmbedBuilder().setTitle(' embeds: 2').setDescription('[Description : 2]'),
 			new EmbedBuilder().setTitle(' embeds: 3').setDescription('[Description : 3]'),
 			new EmbedBuilder().setTitle(' embeds: 4').setDescription('[Description : 4]')

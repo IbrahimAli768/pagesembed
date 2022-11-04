@@ -1,3 +1,8 @@
+<a href="https://discord.gg/vDAdrVNPKt">
+
+![discord](https://img.shields.io/discord/893859514548371546?color=%237289da&label=Discord%20Server&logo=discord&logoColor=%237289da&style=for-the-badge)
+</a>
+
 # Pages Embed 📋
 ```md
 # Create and control Embed pages
@@ -83,3 +88,7 @@ pagesembed(pkgPage, [
 
 client.login("Add Token Here")
 ```
+# Image [`Test Code`]
+> Image Test Code Style Embed and Button 📥
+![image](https://media.discordapp.net/attachments/1030320736038043678/1038176052855451658/image.png)
+

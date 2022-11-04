@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/IbrahimAli768/pagesembed/issues"
   },
-  "homepage": "https://github.com/IbrahimAli768/pagesembed#readme"
+  "homepage": "https://github.com/IbrahimAli768/pagesembed#readme",
+  "dependencies": {
+    "discord.js": "^14.6.0",
+    "pagesembed": "^1.0.3"
+  }
 }

@@ -29,6 +29,8 @@ module.exports = async (interaction , [
     sbut3 = "Danger"
     sbut4 = "Primary"
     sbut5 = "Secondary"
+  } else if(!time){
+    time = 60000
   }
   
   let allbuttons = new ActionRowBuilder()

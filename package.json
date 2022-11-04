@@ -1,6 +1,6 @@
 {
   "name": "pagesembed",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -19,6 +19,6 @@
   "homepage": "https://github.com/IbrahimAli768/pagesembed#readme",
   "dependencies": {
     "discord.js": "^14.6.0",
-    "pagesembed": "^1.0.5"
+    "pagesembed": "^1.0.6"
   }
 }

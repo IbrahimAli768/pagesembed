@@ -17,13 +17,13 @@ module.exports = async (interaction , [
   }
 ]) =>{
 
-  if(!but1 || !but2 || !but3 || !but4 || !but5){
+  if(!but1 || but1 == null || !but2 || but2 == null || !but3 || but3 == null || !but4 || but4 == null || !but5 || but5 == null){
     but1 = "<<"
     but2 = "<"
     but3 = "X"
     but4 = ">"
     but5 = ">>"
-  } else if(!sbut1 || !sbut2 || !sbut3 || !sbut4 || !sbut5){
+  } else if(!sbut1 || sbut1 == null || !sbut2 || sbut2 == null || !sbut3 || sbut3 == null || !sbut4 || sbut4 == null|| !sbut5 || sbut5 == null){
     sbut1 = "Secondary"
     sbut2 = "Primary"
     sbut3 = "Danger"

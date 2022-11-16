@@ -17,21 +17,19 @@ module.exports = async (interaction , [
   }
 ]) =>{
 
-  if(!but1 || but1 == null || !but2 || but2 == null || !but3 || but3 == null || !but4 || but4 == null || !but5 || but5 == null){
-    but1 = "<<"
-    but2 = "<"
-    but3 = "X"
-    but4 = ">"
-    but5 = ">>"
-  } else if(!sbut1 || sbut1 == null || !sbut2 || sbut2 == null || !sbut3 || sbut3 == null || !sbut4 || sbut4 == null|| !sbut5 || sbut5 == null){
-    sbut1 = "Secondary"
-    sbut2 = "Primary"
-    sbut3 = "Danger"
-    sbut4 = "Primary"
-    sbut5 = "Secondary"
-  } else if(!time){
-    time = 60000
-  }
+ if(!time) time = 60000
+
+  if(!sbut1 || sbut1 == null) sbut1 = "Secondary"
+  if(!sbut2 || sbut2 == null) sbut2 = "Primary"
+  if(!sbut3 || sbut3 == null) sbut3 = "Danger"
+  if(!sbut4 || sbut4 == null) sbut4 = "Primary"
+  if(!sbut5 || sbut5 == null) sbut5 = "Secondary"
+
+  if(!but1 || but1 == null) but1 = "<<"
+  if(!but2 || but2 == null) but2 = "<"
+  if(!but3 || but3 == null) but3 = "X"
+  if(!but4 || but4 == null) but4 = ">"
+  if(!but5 || but5 == null) but5 = ">>"
   
   let allbuttons = new ActionRowBuilder()
   .addComponents(
@@ -101,13 +99,23 @@ module.exports = async (interaction , [
 await sendMsg.edit({
   embeds: [embeds[currentPage]],
   components: [allbuttons]
-}).catch(err=> null)
+}).catch(async err => {
+  await sendMsg.editReply({
+    embeds: [embeds[currentPage]],
+    components: [allbuttons]
+  })
+})
             } else {
               currentPage = 0
               await sendMsg.edit({
                 embeds: [embeds[currentPage]],
                 components: [allbuttons]
-              }).catch(err=> null)
+              }).catch(async err => {
+                await sendMsg.editReply({
+                  embeds: [embeds[currentPage]],
+                  components: [allbuttons]
+                })
+              })
             }
           }break;
 
@@ -117,13 +125,23 @@ await sendMsg.edit({
               await sendMsg.edit({
                 embeds: [embeds[currentPage]],
                 components: [allbuttons]
-              }).catch(err=> null)
+              }).catch(async err => {
+                await sendMsg.editReply({
+                  embeds: [embeds[currentPage]],
+                  components: [allbuttons]
+                })
+              })
             } else {
               currentPage--
               await sendMsg.edit({
                 embeds: [embeds[currentPage]],
                 components: [allbuttons]
-              }).catch(err=> null)
+              }).catch(async err => {
+                await sendMsg.editReply({
+                  embeds: [embeds[currentPage]],
+                  components: [allbuttons]
+                })
+              })
             }
           }break;
 
@@ -132,7 +150,12 @@ allbuttons.components.forEach((btn) => btn.setDisabled((true)))
 await sendMsg.edit({
   embeds: [embeds[currentPage]],
   components: [allbuttons]
-}).catch(err=> null)
+}).catch(async err => {
+  await sendMsg.editReply({
+    embeds: [embeds[currentPage]],
+    components: [allbuttons]
+  })
+})
 
           }break;
 
@@ -142,13 +165,23 @@ await sendMsg.edit({
               await sendMsg.edit({
                 embeds: [embeds[currentPage]],
                 components: [allbuttons]
-              }).catch(err=> null)
+              }).catch(async err => {
+                await sendMsg.editReply({
+                  embeds: [embeds[currentPage]],
+                  components: [allbuttons]
+                })
+              })
             } else {
               currentPage = 0
               await sendMsg.edit({
                 embeds: [embeds[currentPage]],
                 components: [allbuttons]
-              }).catch(err=> null)
+              }).catch(async err => {
+                await sendMsg.editReply({
+                  embeds: [embeds[currentPage]],
+                  components: [allbuttons]
+                })
+              })
             }
           }break;
 
@@ -157,7 +190,12 @@ currentPage = embeds.length -1
 await sendMsg.edit({
   embeds: [embeds[currentPage]],
   components: [allbuttons]
-}).catch(err=> null)
+}).catch(async err => {
+  await sendMsg.editReply({
+    embeds: [embeds[currentPage]],
+    components: [allbuttons]
+  })
+})
           }break;
         
           default:
@@ -171,7 +209,12 @@ await sendMsg.edit({
 await sendMsg.edit({
   embeds: [embeds[currentPage]],
   components: [allbuttons]
-}).catch(err=> null)
+}).catch(async err => {
+  await sendMsg.editReply({
+    embeds: [embeds[currentPage]],
+    components: [allbuttons]
+  })
+})
     })
 }
 

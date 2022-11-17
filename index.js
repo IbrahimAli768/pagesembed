@@ -100,7 +100,7 @@ await sendMsg.edit({
   embeds: [embeds[currentPage]],
   components: [allbuttons]
 }).catch(async err => {
-  await sendMsg.editReply({
+  return sendMsg.editReply({
     embeds: [embeds[currentPage]],
     components: [allbuttons]
   })
@@ -111,7 +111,7 @@ await sendMsg.edit({
                 embeds: [embeds[currentPage]],
                 components: [allbuttons]
               }).catch(async err => {
-                await sendMsg.editReply({
+                return sendMsg.editReply({
                   embeds: [embeds[currentPage]],
                   components: [allbuttons]
                 })
@@ -126,7 +126,7 @@ await sendMsg.edit({
                 embeds: [embeds[currentPage]],
                 components: [allbuttons]
               }).catch(async err => {
-                await sendMsg.editReply({
+                return sendMsg.editReply({
                   embeds: [embeds[currentPage]],
                   components: [allbuttons]
                 })
@@ -137,7 +137,7 @@ await sendMsg.edit({
                 embeds: [embeds[currentPage]],
                 components: [allbuttons]
               }).catch(async err => {
-                await sendMsg.editReply({
+                return sendMsg.editReply({
                   embeds: [embeds[currentPage]],
                   components: [allbuttons]
                 })
@@ -151,7 +151,7 @@ await sendMsg.edit({
   embeds: [embeds[currentPage]],
   components: [allbuttons]
 }).catch(async err => {
-  await sendMsg.editReply({
+  return sendMsg.editReply({
     embeds: [embeds[currentPage]],
     components: [allbuttons]
   })
@@ -166,7 +166,7 @@ await sendMsg.edit({
                 embeds: [embeds[currentPage]],
                 components: [allbuttons]
               }).catch(async err => {
-                await sendMsg.editReply({
+                return sendMsg.editReply({
                   embeds: [embeds[currentPage]],
                   components: [allbuttons]
                 })
@@ -177,7 +177,7 @@ await sendMsg.edit({
                 embeds: [embeds[currentPage]],
                 components: [allbuttons]
               }).catch(async err => {
-                await sendMsg.editReply({
+                return sendMsg.editReply({
                   embeds: [embeds[currentPage]],
                   components: [allbuttons]
                 })
@@ -191,7 +191,7 @@ await sendMsg.edit({
   embeds: [embeds[currentPage]],
   components: [allbuttons]
 }).catch(async err => {
-  await sendMsg.editReply({
+  return sendMsg.editReply({
     embeds: [embeds[currentPage]],
     components: [allbuttons]
   })
@@ -210,7 +210,7 @@ await sendMsg.edit({
   embeds: [embeds[currentPage]],
   components: [allbuttons]
 }).catch(async err => {
-  await sendMsg.editReply({
+  return sendMsg.editReply({
     embeds: [embeds[currentPage]],
     components: [allbuttons]
   })

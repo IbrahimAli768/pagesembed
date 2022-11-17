@@ -96,106 +96,127 @@ module.exports = async (interaction , [
           case "0":{
             if(currentPage == 0){
               //currentPage = 0
-await sendMsg.edit({
-  embeds: [embeds[currentPage]],
-  components: [allbuttons]
-}).catch(async err => {
-  return sendMsg.editReply({
+try{
+  await sendMsg.edit({
     embeds: [embeds[currentPage]],
     components: [allbuttons]
-  })
-})
+  }).catch(async err => null)
+
+}catch(err){
+  await interaction.editReply({
+    embeds: [embeds[currentPage]],
+    components: [allbuttons]
+  }).catch(err=> { return console.log("Erorrs || Please Delete [interaction.deferReply()] For Delete")})
+}
             } else {
               currentPage = 0
-              await sendMsg.edit({
-                embeds: [embeds[currentPage]],
-                components: [allbuttons]
-              }).catch(async err => {
-                return sendMsg.editReply({
+              try{
+                await sendMsg.edit({
                   embeds: [embeds[currentPage]],
                   components: [allbuttons]
-                })
-              })
+                }).catch(async err => null)
+
+              }catch(err){
+                await interaction.editReply({
+                  embeds: [embeds[currentPage]],
+                  components: [allbuttons]
+                }).catch(err=> { return console.log("Erorrs || Please Delete [interaction.deferReply()] For Delete")})
+              }
             }
           }break;
 
           case "1":{
             if(currentPage < embeds.length - 1){
               currentPage--
-              await sendMsg.edit({
-                embeds: [embeds[currentPage]],
-                components: [allbuttons]
-              }).catch(async err => {
-                return sendMsg.editReply({
+              try{
+                await sendMsg.edit({
                   embeds: [embeds[currentPage]],
                   components: [allbuttons]
-                })
-              })
+                }).catch(async err => null)
+                
+              }catch(err){
+                await interaction.editReply({
+                  embeds: [embeds[currentPage]],
+                  components: [allbuttons]
+                }).catch(err=> { return console.log("Erorrs || Please Delete [interaction.deferReply()] For Delete")})
+              }
             } else {
               currentPage--
-              await sendMsg.edit({
-                embeds: [embeds[currentPage]],
-                components: [allbuttons]
-              }).catch(async err => {
-                return sendMsg.editReply({
+              try{
+                await sendMsg.edit({
                   embeds: [embeds[currentPage]],
                   components: [allbuttons]
-                })
-              })
+                }).catch(async err => null)
+                
+              }catch(err){
+                await interaction.editReply({
+                  embeds: [embeds[currentPage]],
+                  components: [allbuttons]
+                }).catch(err=> { return console.log("Erorrs || Please Delete [interaction.deferReply()] For Delete")})
+              }
             }
           }break;
 
           case "2":{
 allbuttons.components.forEach((btn) => btn.setDisabled((true)))
-await sendMsg.edit({
-  embeds: [embeds[currentPage]],
-  components: [allbuttons]
-}).catch(async err => {
-  return sendMsg.editReply({
+try{
+  await sendMsg.edit({
     embeds: [embeds[currentPage]],
     components: [allbuttons]
-  })
-})
+  }).catch(err=> null)
+}catch(err){
+  await interaction.editReply({
+    embeds: [embeds[currentPage]],
+    components: [allbuttons]
+  }).catch(err=> { return console.log("Erorrs || Please Delete [interaction.deferReply()] For Delete")})
+}
 
           }break;
 
           case "3":{
             if(currentPage < embeds.length - 1){
-              currentPage++
+              try{
+                currentPage++
               await sendMsg.edit({
                 embeds: [embeds[currentPage]],
                 components: [allbuttons]
-              }).catch(async err => {
-                return sendMsg.editReply({
+              })
+              }catch(err){
+                await interaction.editReply({
                   embeds: [embeds[currentPage]],
                   components: [allbuttons]
-                })
-              })
+                }).catch(err=> { return console.log("Erorrs || Please Delete [interaction.deferReply()] For Delete")})
+              }
             } else {
               currentPage = 0
-              await sendMsg.edit({
-                embeds: [embeds[currentPage]],
-                components: [allbuttons]
-              }).catch(async err => {
-                return sendMsg.editReply({
+              try{
+                await sendMsg.edit({
                   embeds: [embeds[currentPage]],
                   components: [allbuttons]
-                })
-              })
+                }).catch(async err => null)
+              }catch(err){
+                await interaction.editReply({
+                  embeds: [embeds[currentPage]],
+                  components: [allbuttons]
+                }).catch(err=> { return console.log("Erorrs || Please Delete [interaction.deferReply()] For Delete")})
+              }
             }
           }break;
 
           case "4":{
 currentPage = embeds.length -1
-await sendMsg.edit({
-  embeds: [embeds[currentPage]],
-  components: [allbuttons]
-}).catch(async err => {
-  return sendMsg.editReply({
+try{
+  await sendMsg.edit({
     embeds: [embeds[currentPage]],
     components: [allbuttons]
-  })
-})
+  }).catch(async err => null)
+
+}catch(err){
+  await interaction.editReply({
+    embeds: [embeds[currentPage]],
+    components: [allbuttons]
+  }).catch(err=> { return console.log("Erorrs || Please Delete [interaction.deferReply()] For Delete")})
+}
           }break;
         
           default:
@@ -206,15 +227,17 @@ await sendMsg.edit({
     })
     collector.on("end", async () =>{
       allbuttons.components.forEach((btn) => btn.setDisabled((true)))
-await sendMsg.edit({
-  embeds: [embeds[currentPage]],
-  components: [allbuttons]
-}).catch(async err => {
-  return sendMsg.editReply({
-    embeds: [embeds[currentPage]],
-    components: [allbuttons]
-  })
-})
+      try{
+        await sendMsg.edit({
+          embeds: [embeds[currentPage]],
+          components: [allbuttons]
+        }).catch(async err => null)
+      }catch(err){
+        await interaction.editReply({
+          embeds: [embeds[currentPage]],
+          components: [allbuttons]
+        }).catch(err=> { return console.log("Erorrs || Please Delete [interaction.deferReply()] For Delete")})
+      }
     })
 }
 
